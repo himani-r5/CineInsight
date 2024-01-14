@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        body {
+            background-color: #CAF0F8;
+            color: #0077B6;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            
+        }
+
+        .movie-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .movie-square {
+            border: 1px solid #111;
+            padding: 20px;
+            margin-right:20px;
+            margin-left:10px;
+            margin-top:20px;
+            width: 250px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #0077B6;
+            transition: transform 0.2s ease-in-out;
+            border-radius: 8px;
+        }
+
+        .movie-square:hover {
+            transform: scale(1.05);
+        }
+
+        a,h2{
+            text-decoration: none;
+            color: #90E0EF;
+        }
+
+        .poster-container {
+            margin-top: 20px; 
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .poster-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; 
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>  Filtered Movies  </h1>
+    <hr>
+    <div class="movie-section">
+    {{#each movies}}
+        <div class="movie-square">
+            <h1><a href="/movie/{{ this._id }}">{{ this.title }}</a></h1>
+            <h2>Rating: {{ this.rating }}</h2>
+            <div class="poster-container">
+                    <img src="{{this.posterUrl}}" alt="{{this.title}}" class="poster-image">
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #298da9; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: #298da9; 
+    margin-bottom: 10px;
+}
+
+.main-container {
+    display: flex; 
+    flex-direction: row;
+    align-items: stretch; 
+    justify-content: flex-start;
+    width: 100%;
+}
+
+a {
+    display: block;
+    padding: 20px; 
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-box {
+    background-color: #212121;
+    color: #eceff1; 
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    height: 100%; 
+}
+
+h2 {
+    margin-top: 5px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+a {
+    background-color: #298da9; 
+    color: #000; 
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: #07596f; 
+}
+
+.homebutton{
+    height:20px;
+    width:100%;
+    z-index:1;
+    margin-right:5px;
+    display:flex;
+
+}
+
+.homebutton button{
+    position:absolute;
+    right:10px;
+    
+    background-color: #000;
+    border:none;
+}
+
+.homebutton a{
+    margin-top:auto;
+    
+}
+</style>
+</head>
+<body>
+    
+    
+    <div class="homebutton">
+        <div class="opt1"><h1>{{ movie.title }}</h1></div>
+        <div class="opt2"><button><a href="/home">Go to Home</a></button></div>
+    </div>
+    <br><br><br>
+    
+
+    <div class="main-container">
+        <a href="{{movie.completeUrl}}">
+            <img src="{{movie.posterUrl}}" alt="{{movie.title}}">
+        </a>
+
+        <div class="details-box">
+            <h2>Rating: {{ movie.rating }}</h2>
+            <h2>Runtime: {{ movie.runtime}}</h2>
+            <h2>Language: {{movie.language}}</h2>
+            <h2>Genre: {{movie.genres}}</h2>
+            <p>{{ movie.summary }}</p>
+            <h2>Platforms: {{movie.platforms}}</h2>
+        </div>
+    </div>
+    
+    <a href="{{movie.trailerUrl}}" target="_blank">Watch Trailer</a>
+</body>
+</html>

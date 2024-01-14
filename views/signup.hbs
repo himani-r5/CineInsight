@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            background-color: #6a6d70;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,p{
+            color: #ffffff;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+            color: #fff;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            box-sizing: border-box;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            background-color: #298da9;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        a{
+            color:#000000;
+        }
+
+        button:hover {
+            background-color: #1f6c7a;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="signup-container">
+    <h1>Sign Up Page</h1>
+    <form action="/signup" method="post" autocomplete="off">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+</body>
+</html>

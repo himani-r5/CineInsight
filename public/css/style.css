@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("posterimg.png");
+    background-size: cover;
+    background-color: #323232; 
+    color: #333333; 
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 130px auto;
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+  }
+  
+  h1 {
+    color: #278d9f; 
+  }
+  
+  p {
+    color: #333333; 
+    line-height: 1.5; 
+    margin-bottom: 20px; 
+  }
+  
+  button {
+    background-color: #278d9f; 
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  button a {
+    color: #fff;
+    text-decoration: none;
+  }
+  button a:hover{
+    color:#3a539b;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background-color: pink;
+    color:#3a539b;
+}
+  
+  footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    color: #666;
+  }
+  
